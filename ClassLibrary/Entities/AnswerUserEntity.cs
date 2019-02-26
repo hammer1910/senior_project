@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace SeniorProject.Entities
+namespace ClassLibrary.Entities
 {
     public class AnswerUserEntity
     {
@@ -13,11 +13,15 @@ namespace SeniorProject.Entities
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int AnswerUserId { get; set; }
 
-        public ICollection<AccountEntity> AccountId { get; set; } = new List<AccountEntity>();
-
-        public ICollection<ExamEntity> ExamId { get; set; } = new List<ExamEntity>();
-
         [MaxLength(10)]
         public string AnswerKey { get; set; }
+
+        [ForeignKey("AccountId")]
+        public AccountEntity Account { set; get; }
+        public int AccountId { get; set; }
+
+        [ForeignKey("ExamId")]
+        public ExamEntity Exam { set; get; }
+        public int ExamId { get; set; }
     }
 }

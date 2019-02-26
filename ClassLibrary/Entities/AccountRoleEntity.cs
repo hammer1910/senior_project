@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace SeniorProject.Entities
+namespace ClassLibrary.Entities
 {
     public class AccountRoleEntity
     {
@@ -13,8 +13,12 @@ namespace SeniorProject.Entities
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int AccountRoleId { get; set; }
 
-        public ICollection<AccountEntity> AccountId { get; set; } = new List<AccountEntity>();
+        [ForeignKey("AccountId")]
+        public AccountEntity Account { set; get; }
+        public int AccountId { get; set; }
 
-        public ICollection<RoleEntity> RoleId { get; set; } = new List<RoleEntity>();
+        [ForeignKey("RoleId")]
+        public RoleEntity Role { set; get; }
+        public int RoleId { get; set; }
     }
 }

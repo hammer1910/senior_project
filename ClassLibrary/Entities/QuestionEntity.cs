@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace SeniorProject.Entities
+namespace ClassLibrary.Entities
 {
     public class QuestionEntity
     {
@@ -40,5 +40,7 @@ namespace SeniorProject.Entities
 
         [MaxLength(20)]
         public string Team { get; set; }
+
+        public ICollection<ExamQuestionEntity> ExamQuestions { get; set; } = new List<ExamQuestionEntity>();
     }
 }

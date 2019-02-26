@@ -4451,22 +4451,6 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XPath.XDocument.dll": {}
         }
-      },
-      "ClassLibrary/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v2.2",
-        "dependencies": {
-          "AutoMapper": "8.0.0",
-          "Microsoft.AspNetCore.App": "2.2.0",
-          "Microsoft.AspNetCore.Razor.Design": "2.2.0",
-          "Microsoft.EntityFrameworkCore.SqlServer": "2.2.2"
-        },
-        "compile": {
-          "bin/placeholder/ClassLibrary.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/ClassLibrary.dll": {}
-        }
       }
     }
   },
@@ -12108,17 +12092,11 @@
         "system.xml.xpath.xdocument.4.3.0.nupkg.sha512",
         "system.xml.xpath.xdocument.nuspec"
       ]
-    },
-    "ClassLibrary/1.0.0": {
-      "type": "project",
-      "path": "../ClassLibrary/ClassLibrary.csproj",
-      "msbuildProject": "../ClassLibrary/ClassLibrary.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.2": [
       "AutoMapper >= 8.0.0",
-      "ClassLibrary >= 1.0.0",
       "Microsoft.AspNetCore.App >= 2.2.0",
       "Microsoft.AspNetCore.Razor.Design >= 2.2.0",
       "Microsoft.EntityFrameworkCore.SqlServer >= 2.2.2",
@@ -12133,11 +12111,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Dot Net\\senior_project\\SeniorProject\\SeniorProject.csproj",
-      "projectName": "SeniorProject",
-      "projectPath": "E:\\Dot Net\\senior_project\\SeniorProject\\SeniorProject.csproj",
+      "projectUniqueName": "E:\\Dot Net\\senior_project\\ClassLibrary\\ClassLibrary.csproj",
+      "projectName": "ClassLibrary",
+      "projectPath": "E:\\Dot Net\\senior_project\\ClassLibrary\\ClassLibrary.csproj",
       "packagesPath": "C:\\Users\\Hammer\\.nuget\\packages\\",
-      "outputPath": "E:\\Dot Net\\senior_project\\SeniorProject\\obj\\",
+      "outputPath": "E:\\Dot Net\\senior_project\\ClassLibrary\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -12155,11 +12133,7 @@
       },
       "frameworks": {
         "netcoreapp2.2": {
-          "projectReferences": {
-            "E:\\Dot Net\\senior_project\\ClassLibrary\\ClassLibrary.csproj": {
-              "projectPath": "E:\\Dot Net\\senior_project\\ClassLibrary\\ClassLibrary.csproj"
-            }
-          }
+          "projectReferences": {}
         }
       },
       "warningProperties": {
@@ -12176,13 +12150,10 @@
             "version": "[8.0.0, )"
           },
           "Microsoft.AspNetCore.App": {
-            "suppressParent": "All",
             "target": "Package",
-            "version": "[2.2.0, )",
-            "autoReferenced": true
+            "version": "[2.2.0, )"
           },
           "Microsoft.AspNetCore.Razor.Design": {
-            "suppressParent": "All",
             "target": "Package",
             "version": "[2.2.0, )"
           },

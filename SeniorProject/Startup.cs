@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using ClassLibrary.Entities;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Formatters;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
@@ -30,8 +32,8 @@ namespace SeniorProject
                 .AddMvcOptions(o => o.OutputFormatters.Add(
                     new XmlDataContractSerializerOutputFormatter()));
 
-            //var connectionString = @"Data Source=CPU051;Initial Catalog=pass_toeic_together;Persist Security Info=True;User ID=sa;Password=123456";
-            //services.AddDbContext<CityInfoContext>(o => o.UseSqlServer(connectionString));
+            var connectionString = @"Data Source=CPU051;Initial Catalog=senior_project;Persist Security Info=True;User ID=admin;Password=admin";
+            services.AddDbContext<ExamContext>(o => o.UseSqlServer(connectionString));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

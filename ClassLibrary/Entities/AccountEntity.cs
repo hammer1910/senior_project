@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace SeniorProject.Entities
+namespace ClassLibrary.Entities
 {
     public class AccountEntity
     {
@@ -30,5 +30,12 @@ namespace SeniorProject.Entities
 
         [MaxLength(150)]
         public string Address { get; set; }
+
+        public ICollection<GroupMemberEntity> GroupMembers { get; set; } = new List<GroupMemberEntity>();
+        public ICollection<HistoryEntity> Histories { get; set; } = new List<HistoryEntity>();
+        public ICollection<NotificationEntity> Notifications { get; set; } = new List<NotificationEntity>();
+        public ICollection<AccountRoleEntity> AccountRoles { get; set; } = new List<AccountRoleEntity>();
+        public ICollection<GroupOwnerEntity> GroupOwners { get; set; } = new List<GroupOwnerEntity>();
+        public ICollection<AnswerUserEntity> AnswerUsers { get; set; } = new List<AnswerUserEntity>();
     }
 }

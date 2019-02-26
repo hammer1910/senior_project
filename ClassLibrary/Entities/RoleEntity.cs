@@ -5,18 +5,17 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace SeniorProject.Entities
+namespace ClassLibrary.Entities
 {
-    public class ExamEntity
+    public class RoleEntity
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int ExamId { get; set; }
+        public int RoleId { get; set; }
 
-        public DateTime StartDate { get; set; }
+        [MaxLength(20)]
+        public string NameRole { get; set; }
 
-        public DateTime EndDate { get; set; }
-
-        public ICollection<GroupEntity> GroupId { get; set; } = new List<GroupEntity>();
+        public ICollection<AccountRoleEntity> AccountRoles { get; set; } = new List<AccountRoleEntity>();
     }
 }

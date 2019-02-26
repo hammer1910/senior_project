@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace SeniorProject.Entities
+namespace ClassLibrary.Entities
 {
     public class HistoryEntity
     {
@@ -17,10 +17,16 @@ namespace SeniorProject.Entities
 
         public DateTime EndTime { get; set; }
 
-        public ICollection<AccountEntity> AccountId { get; set; } = new List<AccountEntity>();
+        [ForeignKey("GroupId")]
+        public GroupEntity Group { set; get; }
+        //public int GroupId { get; set; }
 
-        public ICollection<GroupEntity> GroupId { get; set; } = new List<GroupEntity>();
+        [ForeignKey("AccountId")]
+        public AccountEntity Account { set; get; }
+        public int AccountId { get; set; }
 
-        public ICollection<ExamEntity> ExamId { get; set; } = new List<ExamEntity>();
+        [ForeignKey("ExamId")]
+        public ExamEntity Exam { set; get; }
+        public int ExamId { get; set; }
     }
 }

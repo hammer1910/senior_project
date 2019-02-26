@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace SeniorProject.Entities
+namespace ClassLibrary.Entities
 {
     public class GroupMemberEntity
     {
@@ -13,8 +13,12 @@ namespace SeniorProject.Entities
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int GroupMemberId { get; set; }
 
-        public ICollection<GroupEntity> GroupId { get; set; } = new List<GroupEntity>();
+        [ForeignKey("GroupId")]
+        public GroupEntity Group { set; get; }
+        public int GroupId { get; set; }
 
-        public ICollection<AccountEntity> MemberId { get; set; } = new List<AccountEntity>();
+        [ForeignKey("AccountId")]
+        public AccountEntity Account { set; get; }
+        public int AccountId { get; set; }
     }
 }

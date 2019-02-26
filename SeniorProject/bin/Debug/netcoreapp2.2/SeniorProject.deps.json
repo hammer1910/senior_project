@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.2",
-    "signature": "8c51bfdfdddc936cca15198a6a5b2af4719f83fc"
+    "signature": "1239778d70f5a3fc6b489c7001d218f0079ecd67"
   },
   "compilationOptions": {
     "defines": [
@@ -25,9 +25,11 @@
       "SeniorProject/1.0.0": {
         "dependencies": {
           "AutoMapper": "8.0.0",
+          "ClassLibrary": "1.0.0",
           "Microsoft.AspNetCore.App": "2.2.0",
           "Microsoft.AspNetCore.Razor.Design": "2.2.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "2.2.2",
+          "Microsoft.EntityFrameworkCore.Tools": "2.2.2",
           "Microsoft.NETCore.App": "2.2.0"
         },
         "runtime": {
@@ -87,6 +89,21 @@
         }
       },
       "Microsoft.EntityFrameworkCore.Analyzers/2.2.2": {},
+      "Microsoft.EntityFrameworkCore.Design/2.2.2": {
+        "dependencies": {
+          "Microsoft.CSharp": "4.5.0",
+          "Microsoft.EntityFrameworkCore.Relational": "2.2.2"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.EntityFrameworkCore.Design.dll": {
+            "assemblyVersion": "2.2.2.0",
+            "fileVersion": "2.2.2.19024"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.EntityFrameworkCore.Design.dll": {}
+        }
+      },
       "Microsoft.EntityFrameworkCore.Relational/2.2.2": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "2.2.2"
@@ -114,6 +131,11 @@
         },
         "compile": {
           "lib/netstandard2.0/Microsoft.EntityFrameworkCore.SqlServer.dll": {}
+        }
+      },
+      "Microsoft.EntityFrameworkCore.Tools/2.2.2": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.Design": "2.2.2"
         }
       },
       "Microsoft.NETCore.App/2.2.0": {
@@ -335,6 +357,20 @@
           "System.Runtime": "4.3.0"
         }
       },
+      "ClassLibrary/1.0.0": {
+        "dependencies": {
+          "AutoMapper": "8.0.0",
+          "Microsoft.AspNetCore.App": "2.2.0",
+          "Microsoft.AspNetCore.Razor.Design": "2.2.0",
+          "Microsoft.EntityFrameworkCore.SqlServer": "2.2.2"
+        },
+        "runtime": {
+          "ClassLibrary.dll": {}
+        },
+        "compile": {
+          "ClassLibrary.dll": {}
+        }
+      },
       "Microsoft.AspNet.WebApi.Client/5.2.6": {
         "dependencies": {
           "Newtonsoft.Json": "11.0.2",
@@ -485,11 +521,11 @@
           "Microsoft.EntityFrameworkCore": "2.2.2",
           "Microsoft.EntityFrameworkCore.Abstractions": "2.2.2",
           "Microsoft.EntityFrameworkCore.Analyzers": "2.2.2",
-          "Microsoft.EntityFrameworkCore.Design": "2.2.0",
+          "Microsoft.EntityFrameworkCore.Design": "2.2.2",
           "Microsoft.EntityFrameworkCore.InMemory": "2.2.0",
           "Microsoft.EntityFrameworkCore.Relational": "2.2.2",
           "Microsoft.EntityFrameworkCore.SqlServer": "2.2.2",
-          "Microsoft.EntityFrameworkCore.Tools": "2.2.0",
+          "Microsoft.EntityFrameworkCore.Tools": "2.2.2",
           "Microsoft.Extensions.Caching.Abstractions": "2.2.0",
           "Microsoft.Extensions.Caching.Memory": "2.2.0",
           "Microsoft.Extensions.Caching.SqlServer": "2.2.0",
@@ -1671,28 +1707,12 @@
         },
         "compileOnly": true
       },
-      "Microsoft.EntityFrameworkCore.Design/2.2.0": {
-        "dependencies": {
-          "Microsoft.CSharp": "4.5.0",
-          "Microsoft.EntityFrameworkCore.Relational": "2.2.2"
-        },
-        "compile": {
-          "lib/netstandard2.0/Microsoft.EntityFrameworkCore.Design.dll": {}
-        },
-        "compileOnly": true
-      },
       "Microsoft.EntityFrameworkCore.InMemory/2.2.0": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "2.2.2"
         },
         "compile": {
           "lib/netstandard2.0/Microsoft.EntityFrameworkCore.InMemory.dll": {}
-        },
-        "compileOnly": true
-      },
-      "Microsoft.EntityFrameworkCore.Tools/2.2.0": {
-        "dependencies": {
-          "Microsoft.EntityFrameworkCore.Design": "2.2.0"
         },
         "compileOnly": true
       },
@@ -3297,6 +3317,13 @@
       "path": "microsoft.entityframeworkcore.analyzers/2.2.2",
       "hashPath": "microsoft.entityframeworkcore.analyzers.2.2.2.nupkg.sha512"
     },
+    "Microsoft.EntityFrameworkCore.Design/2.2.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-n4Nanuwwae1k98I+W8FgM9E8lx0D70smrpVaHkygh4lG4n+E2eRcZnpgUfhBxqgDRSjXGCHduzLZXU8/jjDe8Q==",
+      "path": "microsoft.entityframeworkcore.design/2.2.2",
+      "hashPath": "microsoft.entityframeworkcore.design.2.2.2.nupkg.sha512"
+    },
     "Microsoft.EntityFrameworkCore.Relational/2.2.2": {
       "type": "package",
       "serviceable": true,
@@ -3310,6 +3337,13 @@
       "sha512": "sha512-xC9tZvGArwC2cZ2g+Fl80lX8lmo4sC8IR5OH4cH0TuqUsCzIp12srIx3ldAh+kRj+vD4JhqU+zsfaCxDfoeFYA==",
       "path": "microsoft.entityframeworkcore.sqlserver/2.2.2",
       "hashPath": "microsoft.entityframeworkcore.sqlserver.2.2.2.nupkg.sha512"
+    },
+    "Microsoft.EntityFrameworkCore.Tools/2.2.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-vrgZSdo1tc6gFS7U961KHO/eS8oN+5CdfKDATRfmQgeS8DvyldqRPibw3o+lrpqjolKmGYAMVGu3yPJD4p6nfQ==",
+      "path": "microsoft.entityframeworkcore.tools/2.2.2",
+      "hashPath": "microsoft.entityframeworkcore.tools.2.2.2.nupkg.sha512"
     },
     "Microsoft.NETCore.App/2.2.0": {
       "type": "package",
@@ -3387,6 +3421,11 @@
       "sha512": "sha512-Yn/WfYe9RoRfmSLvUt2JerP0BTGGykCZkQPgojaxgzF2N0oPo+/AhB8TXOpdCcNlrG3VRtsamtK2uzsp3cqRVw==",
       "path": "system.linq.queryable/4.0.1",
       "hashPath": "system.linq.queryable.4.0.1.nupkg.sha512"
+    },
+    "ClassLibrary/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "Microsoft.AspNet.WebApi.Client/5.2.6": {
       "type": "package",
@@ -4102,26 +4141,12 @@
       "path": "microsoft.dotnet.platformabstractions/2.1.0",
       "hashPath": "microsoft.dotnet.platformabstractions.2.1.0.nupkg.sha512"
     },
-    "Microsoft.EntityFrameworkCore.Design/2.2.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-cl26EJJogpPN8/Fd1L4hXfiiVgJoWw0XZ+e/723SjSDDZLnd8gRY7zzhCb2OA7XbURUxkwidozJ97qH8+36XUQ==",
-      "path": "microsoft.entityframeworkcore.design/2.2.0",
-      "hashPath": "microsoft.entityframeworkcore.design.2.2.0.nupkg.sha512"
-    },
     "Microsoft.EntityFrameworkCore.InMemory/2.2.0": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-+xpnzvGbfa8rKwlvUqOVEBdJ4ZGHIpVi1/6k2MDUoh62eutKiW/Dmmwr9nIAXIWc7s925/QDAEc7ECpMdLE+DA==",
       "path": "microsoft.entityframeworkcore.inmemory/2.2.0",
       "hashPath": "microsoft.entityframeworkcore.inmemory.2.2.0.nupkg.sha512"
-    },
-    "Microsoft.EntityFrameworkCore.Tools/2.2.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-wn1ULjQbFadRosiNJE4B65iR5eYL3FkMezH4Tyv8EmdmN5XfCTzIgkk1mQJ1Zcb61Kb3qyZMeGidanwR7h/gug==",
-      "path": "microsoft.entityframeworkcore.tools/2.2.0",
-      "hashPath": "microsoft.entityframeworkcore.tools.2.2.0.nupkg.sha512"
     },
     "Microsoft.Extensions.Caching.Abstractions/2.2.0": {
       "type": "package",

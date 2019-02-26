@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using ClassLibrary.Entities;
 using Microsoft.AspNetCore.Mvc;
 
 namespace SeniorProject.Controllers
@@ -10,6 +11,12 @@ namespace SeniorProject.Controllers
     [ApiController]
     public class ValuesController : ControllerBase
     {
+        private ExamContext _ctx;
+        public ValuesController(ExamContext ctx)
+        {
+            _ctx = ctx;
+        }
+
         // GET api/values
         [HttpGet]
         public ActionResult<IEnumerable<string>> Get()
